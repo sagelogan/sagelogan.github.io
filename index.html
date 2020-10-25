@@ -3,9 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My portfolio</title>
+    <title>Logan Sage</title>
+    <link rel="stylesheet" href="./Assets/CSS/reset.css">
+    <link rel="stylesheet" href="./Assets/CSS/index.css">
+    <link rel="stylesheet" href="./Assets/CSS/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/wxt7pir.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./Scripts/script.js"></script>
 </head>
+
 <body>
-    <h1>Logan Sage</h1>
+    <header>
+        <h1> 
+            Logan Sage
+        </h1>
+        <nav class="topnav">
+            <a href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#MyWork">My Work</a>
+            <a href="#Contact">Contact</a>
+        </nav>
+    </header>
+
+
+    <div id = "Home">
+
+        <div class="slide-show">
+          <img class="mySlides" src="./Assets/Pictures/Blue.JPG" style="width:100% max-height: 80vh;">
+
+          <img class="mySlides" src="./Assets/Pictures/RedWavy.PNG" style="width:100% max-height: 80vh;">
+
+          <img class="mySlides" src="./Assets/Pictures/UnderWater.JPG" style="width:100% max-height: 80vh;">
+
+
+        
+        
+                <script>
+                var myIndex = 0;
+                carousel();
+                
+                function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                }
+                myIndex++;
+                if (myIndex > x.length) {myIndex = 1}    
+                x[myIndex-1].style.display = "block";  
+                setTimeout(carousel, 4000); // Change image every 4 seconds
+                }
+                </script>
+
+    </div>
+
+
+   <div id = "About">
+    <div>
+        <h2>
+            About Me
+        </h2>
+        <p>
+            I am a 19 year-old business owner and Full Stack Web-Developer. I own The Range, a concert venue and recording studio located in Las Cruces, New Mexico. I co-founded The Range in 2019, months before high-school graduation. The Range hosts live concerts with local and multi-national artists alike. The studio side of the business came after only a few months of hosting shows. Along side general music production for artists we produce live sessions, interviews, and more to our online audience.
+        </p>    
+        <p style = "margin-bottom: 2.5%;">  In 2019 I attended CSSI at Google where I built my inital foundation for Full-stack Web Development and fell in love with building websites to solve problems. In 2020, amidst a global pandemic I attended the University of Texas Austin Full-Stack Bootcamp.
+        </p>
+    </div>
+   </div> 
+
+   <div id = "MyWork">
+
+        <h2>
+            My Work
+        </h2>
+
+        <div id = "resume-buttons">
+
+            <button id = "download-resume">Download/View Resume<a href="./Assets/Resume.pdf"></a>
+            </button>
+
+            
+        </div>
+
+
+         <!-- my work image grid -->
+      <div id="row1">
+        <div class="container" id = "shop2">
+            <img src="./Assets/Pictures/lyfehere.png"  alt="" class="img" id="shops">
+            <div class = "grid-text" style="color: white;" id="shops3"></div>
+        </div>
+        <div class="container" id = "deals2">
+            <img src="./Assets/Pictures/collegeplus.png" alt="" class="img" id="deals" >
+            <div class = "grid-text" style= "color:white;" id="deals3"></div>
+        </div>
+        <div class="container" id = "food2">
+            <img src="./Assets/Pictures/TheRangeSite.png" alt="" class="img" id="food">
+            <div class = "grid-text" style="color: white;" id="food3"></div>
+        </div>
+    </div>
+    <div id="row2">
+        <div class="container" id= "events2">
+            <img src="/pictures/LasCrucesNMGrid/Events.png" alt="" class="img" id="events">
+            <div class = "grid-text" style= "color:white;" id="events3"></div>
+        </div>
+        <div class="container" id= "outdoors2">
+            <img src="/pictures/LasCrucesNMGrid/Outdoor-Activities.png" alt="" class="img" id="outdoors">
+            <div class = "grid-text" style="color: white;" id="outdoors3"></div>
+        </div>
+        <div class="container" id="music2">
+            <img src="/pictures/LasCrucesNMGrid/Music.png" alt="" class="img" id="music">
+            <div class = "grid-text" id="gridtextmusic" style="color: white;" id="music3"></div>
+        </div>
+    </div>
+    <div id="row3">
+        <div class="container" id= "clubs2">
+            <img src="/pictures/LasCrucesNMGrid/Clubs-Groups.png" alt="" class="img" id="clubs">
+            <div class = "grid-text" style = "color:white;" id="clubs3"></div>
+        </div>
+        <div class="container"  id= "museums2">
+            <img src="/pictures/LasCrucesNMGrid/Museums.png" alt="" class="img" id="museums">
+            <div class = "grid-text" style="color: white;" id="museums3"></div>
+        </div>
+        <div class="container" id= "downtown2">
+            <img src="/pictures/LasCrucesNMGrid/Downtown.png" alt="" class="img" id="downtown">
+            <div class = "grid-text" style="color: white;" id="downtown3"></div>
+        </div>
+    </div>
+    <div id="row4">
+        <div class="container"  id = "art2">
+          <img src="/pictures/LasCrucesNMGrid/Art.png" alt="" class="img" id="art">
+          <div class = "grid-text" style="color: white;" id = "art3"></div>
+        </div>
+        <div class="container"  id= "lodging2">
+            <img src="/pictures/LasCrucesNMGrid/Lodging.png" alt="" class="img" id="lodging">
+            <div class = "grid-text" style="color: white;" id = "lodging3"></div>
+        </div>
+        <div class="container"  id= "movies2">
+          <img src="/pictures/LasCrucesNMGrid/Movies.png" alt="" class="img" id="movies">
+          <div class = "grid-text" style = "color: white;" id="movies3"></div>
+        </div>
+    </div>
+
+
+
+   </div>
+
+   <div id = "Contact"> 
+    <h2>
+        Contact
+    </h2>
+
+    <div class="social-buttons">
+    
+        <a href="https://www.linkedin.com/in/logan-sage-71021018b/" class="fa fa-linkedin">Linkedin</a>
+
+        <a href="https://www.instagram.com/logan.sage/" class="fa fa-instagram">Instagram</a> 
+
+        <a href="https://www.youtube.com/channel/UCk5k-zDWVQuH5xBDswh2Ppg?view_as=subscriber" class="fa fa-youtube">YouTube</a>
+
+        <a href="https://github.com/sagelogan" class="fa fa-github">GitHub</a>
+
+
+    </div>
+
+   </div>
 </body>
 </html>
